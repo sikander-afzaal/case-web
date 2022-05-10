@@ -1,0 +1,75 @@
+.page {
+  background-color: #2d0f2bff;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 7rem;
+  padding-left: 7rem;
+}
+.c_container {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+}
+.contact .c_container {
+  grid-template-columns: max-content max-content;
+}
+.left-section img {
+  width: 35px;
+}
+.right-section {
+  display: flex;
+  padding-top: 0rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  margin-left: 50px;
+  gap: 1rem;
+}
+.right-section h2 {
+  color: #fdea95;
+  font-size: 2rem;
+}
+.bottom-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.bottom-right h1 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.bottom-right p {
+  width: 90%;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.bottom-right p a {
+  width: 100%;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 724px) {
+  .page {
+    padding-left: 1rem;
+  }
+  .c_container {
+    gap: 10px;
+  }
+  .right-section {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 454px) {
+  .bottom-right p {
+    font-size: 15px;
+  }
+  .bottom-right h1 {
+    font-size: 1.3rem;
+  }
+}

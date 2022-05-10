@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+
+.footer {
+  width: 100%;
+  background: #2d0f2b;
+}
+.footer * {
+  font-family: "Archivo", sans-serif !important;
+}
+.ft_container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ft_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-div p {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+.logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 26px;
+  gap: 2px;
+}
+.ft_1 img {
+  margin: 0;
+  width: 100px;
+  object-fit: contain;
+}
+
+.ft_links_wrap {
+  display: flex;
+}
+
+.ft_links_wrap div {
+  margin: 0 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ft_2 img {
+  margin-left: 40px;
+  width: 20px;
+}
+
+.ft_1 a {
+  color: #ffffff;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 658px) {
+  .logo-div {
+    margin-right: 15px;
+  }
+  .ft_links_wrap div {
+    margin: 0 13px;
+  }
+  .ft_2 img {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .ft_1 img {
+    width: 80px;
+  }
+  .ft_links_wrap div P {
+    margin: 0 10px;
+  }
+  .ft_1 a {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 434px) {
+  .ft_1 img {
+    width: 70px;
+  }
+  .logo-div {
+    margin-right: 10px;
+  }
+  .ft_links_wrap div {
+    margin: 0 10px;
+  }
+  .ft_1 a {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .logo-div p {
+    font-size: 0.8rem;
+  }
+  .ft_2 img {
+    width: 20px;
+  }
+  .ft_1 img {
+    width: 60px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .ft_links_wrap div {
+    margin: 0 5px;
+  }
+  .ft_2 img {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .ft_2 img {
+    margin-left: 10px;
+  }
+}
