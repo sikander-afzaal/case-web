@@ -140,6 +140,9 @@ html .mb {
   width: 100%;
   line-height: 18.5px;
 }
+.desc span:nth-child(1) {
+  font-weight: bold;
+}
 .dkk_wrap {
   display: flex;
   align-items: center;
