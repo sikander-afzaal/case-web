@@ -8,6 +8,10 @@ const Hero = () => {
     <>
       <Parallax strength={800} className="hero">
         <img src={fastenImg} alt="" />
+        <h2>
+          Kindly send invitation to me on <span>talhatariq0608@gmail.com</span>{" "}
+          And plz don't discuss about github on Fiverr they will ban my id
+        </h2>
         <img
           onClick={() =>
             scrollToComponent(document.querySelector("#launch"), {

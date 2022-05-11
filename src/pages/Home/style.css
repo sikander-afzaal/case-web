@@ -37,11 +37,14 @@ html {
   cursor: pointer;
 }
 .hero h2 {
-  color: #ffffff;
+  color: black;
   text-align: center;
   margin-top: 20px;
   font-weight: 400;
   font-size: 1rem;
+}
+.hero h2 span {
+  text-decoration: underline;
 }
 
 /* LAUNCH EDITION */
