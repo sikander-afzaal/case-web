@@ -98,12 +98,18 @@ html .mb {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-
+.right-cont {
+  max-width: 500px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+}
 .le_right h1 {
   font-weight: 400;
   color: #ffe779;
   margin-top: 0px;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: bold;
 }
 
@@ -116,10 +122,11 @@ html .mb {
   -webkit-text-stroke-color: #ffe779;
   -webkit-text-stroke-width: 1.5px;
   color: transparent;
+  font-size: 45px;
 }
 .desc {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 300;
   margin-bottom: 20px;
   display: flex;
@@ -128,11 +135,8 @@ html .mb {
   flex-direction: column;
   gap: 10px;
 }
-.desc span:nth-child(1) {
-  font-weight: bold;
-}
 .desc span:nth-child(2) {
-  width: 70%;
+  width: 100%;
   line-height: 18.5px;
 }
 .dkk_wrap {
@@ -170,7 +174,7 @@ html .mb {
   align-items: flex-start;
   flex-direction: column;
   gap: 0px;
-  width: max-content;
+  width: 100%;
 }
 .btn_wrap {
   display: flex;
@@ -182,7 +186,7 @@ html .mb {
   width: 119px;
   height: 50px;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 15px;
   transition: 0.4s all;
   border: 2px solid #ffffff;
   box-sizing: border-box;
@@ -216,7 +220,7 @@ html .mb {
   background: transparent;
   color: #ad8db4;
   border: none;
-  font-size: 17px;
+  font-size: 15px;
   width: 100%;
   font-weight: 600;
   -webkit-appearance: menulist;
@@ -374,6 +378,9 @@ html .mb {
   .col-cont {
     width: 100%;
   }
+  .right-cont {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 1062px) {
   .blend {
@@ -451,6 +458,9 @@ html .mb {
 }
 
 @media screen and (max-width: 725px) {
+  .select_wrap select {
+    font-weight: 800;
+  }
   .desk {
     display: none;
   }
@@ -552,9 +562,6 @@ html .mb {
 
   .blend_content h2 {
     font-size: 2.5rem;
-  }
-  .dkk_wrap {
-    align-self: center;
   }
 }
 

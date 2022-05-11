@@ -87,57 +87,59 @@ const LaunchEdition = () => {
           </Splide>
         </div>
         <div className="le_right">
-          <h2>LAUNCH EDITION</h2>
-          <h1>
-            <span className="stroke">FASTEN</span> Strap+Case
-          </h1>
-          <div className="dkk_wrap">
-            <div className="dkk_div">
-              <span>350 DKK</span>
-            </div>
-            <ScrollRotate method={"perc"} loops={1} from={0} to={360}>
-              <img src={rotate} alt="" className="rotate" />
-            </ScrollRotate>
-          </div>
-          <p className="desc">
-            <span>FASTEN YOUR PHONE</span>
-
-            <span>
-              {" "}
-              Our strapped case lets you embrace freedom and safety. Keep your
-              hands free and your screen safe, by wearing a fashion piece that
-              enables playfulness and experimentation. An invitation to
-              radically change the way you experience your phone, for the
-              better.
-            </span>
-
-            <span> Shipped from Copenhagen, few pieces available.</span>
-          </p>
-          <div className="col-cont">
-            <div className="row-div">
-              <div className="btn_wrap">
-                <button onClick={clickHandler} className="active">
-                  Black Case
-                </button>
-                <button onClick={clickHandler}>Clear Case</button>
+          <div className="right-cont">
+            <h2>LAUNCH EDITION</h2>
+            <h1>
+              <span className="stroke">FASTEN</span> Strap+Case
+            </h1>
+            <div className="dkk_wrap">
+              <div className="dkk_div">
+                <span>350 DKK</span>
               </div>
-              <div className="select_wrap">
-                <select>
-                  <option value="">iPhone 13 Pro</option>
-                  <option value="">iPhone 13 Pro Max</option>
-                  <option value="">iPhone 13</option>
-                  <option value="">iPhone 13 Mini</option>
-                  <option value="">iPhone 12 / 12 Pro</option>
-                  <option value="">iPhone 12 Pro Max</option>
-                  <option value="">iPhone 12 Mini</option>
-                  <option value="">iPhone 11</option>
-                  <option value="">iPhone 11 Pro</option>
-                  <option value="">iPhone 11 Pro Max</option>
-                </select>
-              </div>
+              <ScrollRotate method={"perc"} loops={1} from={0} to={360}>
+                <img src={rotate} alt="" className="rotate" />
+              </ScrollRotate>
             </div>
+            <p className="desc">
+              <span>FASTEN YOUR PHONE</span>
 
-            <button className="buy_now">BUY NOW</button>
+              <span>
+                {" "}
+                Our strapped case lets you embrace freedom and safety. Keep your
+                hands free and your screen safe, by wearing a fashion piece that
+                enables playfulness and experimentation. An invitation to
+                radically change the way you experience your phone, for the
+                better.
+              </span>
+
+              <span> Shipped from Copenhagen, few pieces available.</span>
+            </p>
+            <div className="col-cont">
+              <div className="row-div">
+                <div className="btn_wrap">
+                  <button onClick={clickHandler} className="active">
+                    Black Case
+                  </button>
+                  <button onClick={clickHandler}>Clear Case</button>
+                </div>
+                <div className="select_wrap">
+                  <select>
+                    <option value="">iPhone 13 Pro</option>
+                    <option value="">iPhone 13 Pro Max</option>
+                    <option value="">iPhone 13</option>
+                    <option value="">iPhone 13 Mini</option>
+                    <option value="">iPhone 12 / 12 Pro</option>
+                    <option value="">iPhone 12 Pro Max</option>
+                    <option value="">iPhone 12 Mini</option>
+                    <option value="">iPhone 11</option>
+                    <option value="">iPhone 11 Pro</option>
+                    <option value="">iPhone 11 Pro Max</option>
+                  </select>
+                </div>
+              </div>
+
+              <button className="buy_now">BUY NOW</button>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 
 .footer {
+  padding-inline: 2rem;
   width: 100%;
   background: #2d0f2b;
 }
@@ -8,7 +9,7 @@
   font-family: "Archivo", sans-serif !important;
 }
 .ft_container {
-  width: 90%;
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 2rem;
@@ -104,20 +105,7 @@
   }
 }
 
-@media screen and (max-width: 391px) {
-  .logo-div p {
-    font-size: 0.8rem;
-  }
-  .ft_2 img {
-    width: 20px;
-  }
-  .ft_1 img {
-    width: 60px;
-    margin-right: 8px;
-  }
-}
-
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 378px) {
   .ft_links_wrap div {
     margin: 0 5px;
   }
