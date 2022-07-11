@@ -273,10 +273,25 @@ html .mb {
 .blend {
   width: 100%;
   min-height: 100vh;
-  background: #f1daf1;
+  background: linear-gradient(
+    180deg,
+    #2f2b5c 0%,
+    rgba(109, 105, 157, 0.39) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.blend-bg {
+  z-index: -1;
+  position: absolute;
+  top: 11%;
+  left: 24%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .b_container {
@@ -292,37 +307,23 @@ html .mb {
 
 .blend_content {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: #ffffff;
-  gap: 10rem;
-}
-
-.blend_content h2 {
-  font-size: 80px;
-  font-weight: 800;
-  line-height: 75px;
-  text-decoration: underline;
-  background-image: url("../../assets/dye\ for\ text\ background.jpg");
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
+  position: relative;
+  height: 425px;
 }
 
 .blend_content p {
-  margin-top: 0px;
-  font-size: 15px;
-  line-height: 18px;
+  margin-top: 10px;
+  font-size: 16px;
+  max-width: 550px;
+  line-height: 1.4;
   overflow: hidden;
-  color: #9480bb;
+  color: white;
   padding: 0;
-}
-
-.active_faq {
-  flex: 0.5;
 }
 
 .active_faq p {
@@ -330,37 +331,27 @@ html .mb {
   height: auto;
 }
 
-.blend_imgs {
-  flex: 0.5;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .blend_imgs img {
   object-fit: contain;
-  animation: mover 1s infinite alternate;
-  max-width: 100%;
   opacity: 80%;
-}
-.sharpe_img {
-  width: 308px;
+  position: absolute;
 }
 .cloud_img {
-  width: 90%;
+  left: 40%;
+  max-width: 323px;
+  height: 191px;
 }
 .dollar_img {
-  width: 252px;
+  max-width: 210px;
+  height: 224px;
+  top: -18%;
+  left: 52%;
 }
-@keyframes mover {
-  0% {
-    transform: translateY(6px);
-  }
-
-  100% {
-    transform: translateY(20px);
-  }
+.sharp_img {
+  max-width: 201px;
+  height: 180px;
+  top: 0%;
+  left: 68%;
 }
 
 .show {
@@ -391,6 +382,19 @@ html .mb {
     min-height: 700px;
   }
 }
+@media screen and (max-width: 1344px) {
+  .cloud_img {
+    left: 50%;
+  }
+  .dollar_img {
+    top: -18%;
+    left: 52%;
+  }
+  .sharp_img {
+    top: 0%;
+    left: 78%;
+  }
+}
 @media screen and (max-width: 1300px) {
   .desc {
     width: 100%;
@@ -416,33 +420,34 @@ html .mb {
   .blend {
     padding: 50px 0;
   }
+  .b_container {
+    gap: 5rem;
+    padding-inline: 20px;
+  }
   .blend_content {
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
-    min-height: 115vh;
-    height: 100%;
   }
   .img-div {
     min-height: 550px;
   }
   .active_faq {
     flex: none;
-    width: 100%;
+  }
+  .blend_imgs img {
+    position: static;
   }
   .blend_imgs {
-    flex: none;
-    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .cloud_img {
-    width: 60%;
-  }
-  .sharpe_img {
-    width: 350px;
-  }
-  .dollar_img {
-    width: 350px;
+  .title {
+    max-width: 90%;
+    object-fit: contain;
   }
 }
 @media screen and (max-width: 1006px) {
@@ -470,20 +475,14 @@ html .mb {
   }
 }
 @media screen and (max-width: 986px) {
-  .cloud_img {
-    right: 20px;
-  }
   .le_right {
     padding-inline: 2rem;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .cloud_img {
-    width: 260px;
-  }
-  .sharpe_img {
-    right: 40px;
+  .cloud_img,
+  .sharp_img,
+  .dollar_img {
+    max-width: 70%;
+    height: auto;
   }
 }
 
@@ -533,47 +532,17 @@ html .mb {
     height: 100vw;
     object-fit: cover;
   }
-  .blend_imgs {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .blend_content {
-    margin: 0;
-    width: 100%;
-    flex-direction: column-reverse;
-    min-height: 750px;
-    height: 100vh;
-    padding-inline: 2rem;
-  }
+
   .b_container {
     width: 100%;
   }
   .close {
     display: none;
   }
-  .cloud_img {
-    width: 350px;
-  }
-  .sharpe_img,
-  .dollar_img {
-    width: 260px;
-  }
-  .active_faq {
-    width: 100%;
-    margin-top: 50px;
-  }
   .row-div {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-  .blend_content h2 {
-    font-size: 60px;
-    line-height: 0.85;
   }
 }
 
@@ -586,6 +555,9 @@ html .mb {
   }
   .blend_content h2 {
     font-size: 50px;
+  }
+  .blend-bg {
+    display: none;
   }
 }
 @media screen and (max-width: 420px) {
