@@ -7,6 +7,7 @@ import Terms from "./pages/Terms/Terms";
 import Privacy from "./pages/Privacy/Privacy";
 import Shipping from "./pages/Shipping/Shipping";
 import Returns from "./pages/Returns/Returns";
+import ProductPage from "./pages/ProductPage/ProductPage";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route element={<Privacy />} path={"/privacy"}></Route>
           <Route element={<Shipping />} path={"/shipping"}></Route>
           <Route element={<Returns />} path={"/returns"}></Route>
+          <Route element={<ProductPage />} path={"/:product"}></Route>
         </Routes>
       </Router>
     </>

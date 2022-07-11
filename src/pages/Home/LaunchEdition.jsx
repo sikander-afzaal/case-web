@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { ScrollRotate } from "react-scroll-rotate";
 import scrollToComponent from "react-scroll-to-component";
 // assets
 import A from "../../assets/images/A.jpeg";
@@ -11,17 +10,28 @@ import D from "../../assets/images/D.jpeg";
 import E from "../../assets/images/E.jpeg";
 import F from "../../assets/images/F.jpeg";
 import rotate from "../../assets/rotate.png";
+import bg from "../../assets/bg.svg";
+import { Link } from "react-router-dom";
 const LaunchEdition = () => {
   const [clear, setCase] = useState(false);
+  const [url, setUrl] = useState("iPhone13ProBlack");
+  const [selectValue, setSelectValue] = useState("iPhone 13 Pro");
   const clickHandler = (e) => {
     const active = document.querySelector(".active");
     active.classList.remove("active");
     e.target.classList.add("active");
+    let type = "";
     if (e.target.innerText === "Black Case") {
       setCase(false);
+      type = "Black";
     } else if (e.target.innerText === "Clear Case") {
       setCase(true);
+      type = "Clear";
     }
+    setUrl(() => {
+      const value = selectValue.split(" ").join("");
+      setUrl(value + type);
+    });
     scrollToComponent(document.querySelector("#mob-img"), {
       offset: 0,
       align: "top",
@@ -40,6 +50,14 @@ const LaunchEdition = () => {
           <div className="img-div">
             <img src={E} alt="" />
             <img src={B} alt="" className={`${clear ? "opacity0" : ""}`} />
+          </div>
+          <div className="img-div">
+            <img src={F} alt="" />
+            <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+          </div>
+          <div className="img-div">
+            <img src={F} alt="" />
+            <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
           <div className="img-div">
             <img src={F} alt="" />
@@ -84,9 +102,22 @@ const LaunchEdition = () => {
                 <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
               </div>
             </SplideSlide>
+            <SplideSlide className="swiper-lazy">
+              <div className="img-div">
+                <img src={F} alt="" />
+                <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+              </div>
+            </SplideSlide>
+            <SplideSlide className="swiper-lazy">
+              <div className="img-div">
+                <img src={F} alt="" />
+                <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+              </div>
+            </SplideSlide>
           </Splide>
         </div>
         <div className="le_right">
+          <img src={bg} className="bg-shine" alt="" />
           <div className="right-cont">
             <h2>LAUNCH EDITION</h2>
             <h1>
@@ -96,9 +127,7 @@ const LaunchEdition = () => {
               <div className="dkk_div">
                 <span>350 DKK</span>
               </div>
-              <ScrollRotate method={"perc"} loops={1} from={0} to={360}>
-                <img src={rotate} alt="" className="rotate" />
-              </ScrollRotate>
+              <img src={rotate} alt="" className="rotate" />
             </div>
             <p className="desc">
               <span>FASTEN YOUR PHONE</span>
@@ -123,22 +152,36 @@ const LaunchEdition = () => {
                   <button onClick={clickHandler}>Clear Case</button>
                 </div>
                 <div className="select_wrap">
-                  <select>
-                    <option value="">iPhone 13 Pro</option>
-                    <option value="">iPhone 13 Pro Max</option>
-                    <option value="">iPhone 13</option>
-                    <option value="">iPhone 13 Mini</option>
-                    <option value="">iPhone 12 / 12 Pro</option>
-                    <option value="">iPhone 12 Pro Max</option>
-                    <option value="">iPhone 12 Mini</option>
-                    <option value="">iPhone 11</option>
-                    <option value="">iPhone 11 Pro</option>
-                    <option value="">iPhone 11 Pro Max</option>
+                  <select
+                    onChange={(e) => {
+                      setSelectValue(e.target.value);
+                      setUrl(() => {
+                        const value = e.target.value.split(" ").join("");
+                        const type = clear ? "Clear" : "Black";
+                        setUrl(value + type);
+                      });
+                    }}
+                    value={selectValue}
+                  >
+                    <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+                    <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+                    <option value="iPhone 13">iPhone 13</option>
+                    <option value="iPhone 13 Mini">iPhone 13 Mini</option>
+                    <option value="iPhone 12 / 12 Pro">
+                      iPhone 12 / 12 Pro
+                    </option>
+                    <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                    <option value="iPhone 12 Mini">iPhone 12 Mini</option>
+                    <option value="iPhone 11">iPhone 11</option>
+                    <option value="iPhone 11 Pro">iPhone 11 Pro</option>
+                    <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
                   </select>
                 </div>
               </div>
 
-              <button className="buy_now">BUY NOW</button>
+              <Link to={`/${url}`} className="buy_now">
+                BUY NOW
+              </Link>
             </div>
           </div>
         </div>
