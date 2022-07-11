@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import scrollToComponent from "react-scroll-to-component";
+import { ScrollRotate } from "react-scroll-rotate";
 // assets
 import A from "../../assets/images/A.jpeg";
 import B from "../../assets/images/B.jpeg";
@@ -127,7 +128,9 @@ const LaunchEdition = () => {
               <div className="dkk_div">
                 <span>350 DKK</span>
               </div>
-              <img src={rotate} alt="" className="rotate" />
+              <ScrollRotate method={"perc"} loops={1} from={0} to={360}>
+                <img src={rotate} alt="" className="rotate" />
+              </ScrollRotate>
             </div>
             <p className="desc">
               <span>FASTEN YOUR PHONE</span>
