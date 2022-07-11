@@ -557,6 +557,9 @@ html .mb {
     align-items: center;
     justify-content: center;
   }
+  .buy_now {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (max-width: 635px) {
   .title {
