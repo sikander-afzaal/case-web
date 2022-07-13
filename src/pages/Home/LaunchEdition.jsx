@@ -14,8 +14,8 @@ import rotate from "../../assets/rotate.png";
 import bg from "../../assets/bg.svg";
 import { Link } from "react-router-dom";
 const LaunchEdition = () => {
-  const [clear, setCase] = useState(true);
-  const [url, setUrl] = useState("iPhone13ProClear");
+  const [clear, setCase] = useState(false);
+  const [url, setUrl] = useState("iPhone13ProBlack");
   const [selectValue, setSelectValue] = useState("iPhone 13 Pro");
   const clickHandler = (e) => {
     const active = document.querySelector(".active");
@@ -149,10 +149,10 @@ const LaunchEdition = () => {
             <div className="col-cont">
               <div className="row-div">
                 <div className="btn_wrap">
-                  <button onClick={clickHandler}>Black Case</button>
                   <button onClick={clickHandler} className="active">
-                    Clear Case
+                    Black Case
                   </button>
+                  <button onClick={clickHandler}>Clear Case</button>
                 </div>
                 <div className="select_wrap">
                   <select
