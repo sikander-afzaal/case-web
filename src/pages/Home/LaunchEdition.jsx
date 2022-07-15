@@ -92,7 +92,7 @@ const LaunchEdition = () => {
               <div className="img-div">
                 <img src={clear1} alt="" />
                 <img
-                  src={black2}
+                  src={black1}
                   alt=""
                   className={`${clear ? "opacity0" : ""}`}
                 />
