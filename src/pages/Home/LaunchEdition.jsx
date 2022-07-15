@@ -4,12 +4,16 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import scrollToComponent from "react-scroll-to-component";
 import { ScrollRotate } from "react-scroll-rotate";
 // assets
-import A from "../../assets/images/A.jpeg";
-import B from "../../assets/images/B.jpeg";
-import C from "../../assets/images/C.jpeg";
-import D from "../../assets/images/D.jpeg";
-import E from "../../assets/images/E.jpeg";
-import F from "../../assets/images/F.jpeg";
+import clear1 from "../../assets/images/clear/1.jpg";
+import clear2 from "../../assets/images/clear/2.jpg";
+import clear3 from "../../assets/images/clear/3.jpg";
+import clear4 from "../../assets/images/clear/4.jpg";
+import clear5 from "../../assets/images/clear/5.jpg";
+import black1 from "../../assets/images/black/1.jpg";
+import black2 from "../../assets/images/black/2.jpg";
+import black3 from "../../assets/images/black/3.jpg";
+import black4 from "../../assets/images/black/4.jpg";
+import black5 from "../../assets/images/black/5.jpg";
 import rotate from "../../assets/rotate.png";
 import bg from "../../assets/bg.svg";
 import { Link } from "react-router-dom";
@@ -45,31 +49,30 @@ const LaunchEdition = () => {
       <section id="launch" className="launch_edition">
         <div className="le_left desk">
           <div className="img-div">
-            <img src={D} alt="" />
-            <img src={A} alt="" className={`${clear ? "opacity0" : ""}`} />
+            <img src={clear1} alt="" />
+            <img src={black1} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
           <div className="img-div">
-            <img src={E} alt="" />
-            <img src={B} alt="" className={`${clear ? "opacity0" : ""}`} />
+            <img src={clear2} alt="" />
+            <img src={black2} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
           <div className="img-div">
-            <img src={F} alt="" />
-            <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+            <img src={clear3} alt="" />
+            <img src={black3} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
           <div className="img-div">
-            <img src={F} alt="" />
-            <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+            <img src={clear4} alt="" />
+            <img src={black4} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
           <div className="img-div">
-            <img src={F} alt="" />
-            <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+            <img src={clear5} alt="" />
+            <img src={black5} alt="" className={`${clear ? "opacity0" : ""}`} />
           </div>
         </div>
         <div id="mob-img" className="le_left mb">
           <Splide
             options={{
               interval: 2500,
-              // autoplay: true,
               gap: "0px",
               rewind: true,
               loop: false,
@@ -87,32 +90,52 @@ const LaunchEdition = () => {
           >
             <SplideSlide className="swiper-lazy">
               <div className="img-div">
-                <img src={D} alt="" />
-                <img src={A} alt="" className={`${clear ? "opacity0" : ""}`} />
+                <img src={clear1} alt="" />
+                <img
+                  src={black2}
+                  alt=""
+                  className={`${clear ? "opacity0" : ""}`}
+                />
               </div>
             </SplideSlide>
             <SplideSlide className="swiper-lazy">
               <div className="img-div">
-                <img src={E} alt="" />
-                <img src={B} alt="" className={`${clear ? "opacity0" : ""}`} />
+                <img src={clear2} alt="" />
+                <img
+                  src={black2}
+                  alt=""
+                  className={`${clear ? "opacity0" : ""}`}
+                />
               </div>
             </SplideSlide>
             <SplideSlide className="swiper-lazy">
               <div className="img-div">
-                <img src={F} alt="" />
-                <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+                <img src={clear3} alt="" />
+                <img
+                  src={black3}
+                  alt=""
+                  className={`${clear ? "opacity0" : ""}`}
+                />
               </div>
             </SplideSlide>
             <SplideSlide className="swiper-lazy">
               <div className="img-div">
-                <img src={F} alt="" />
-                <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+                <img src={clear4} alt="" />
+                <img
+                  src={black4}
+                  alt=""
+                  className={`${clear ? "opacity0" : ""}`}
+                />
               </div>
             </SplideSlide>
             <SplideSlide className="swiper-lazy">
               <div className="img-div">
-                <img src={F} alt="" />
-                <img src={C} alt="" className={`${clear ? "opacity0" : ""}`} />
+                <img src={clear5} alt="" />
+                <img
+                  src={black5}
+                  alt=""
+                  className={`${clear ? "opacity0" : ""}`}
+                />
               </div>
             </SplideSlide>
           </Splide>
