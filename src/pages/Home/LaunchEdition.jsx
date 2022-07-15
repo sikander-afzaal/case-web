@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import scrollToComponent from "react-scroll-to-component";
@@ -16,27 +16,134 @@ import black4 from "../../assets/images/black/4.jpg";
 import black5 from "../../assets/images/black/5.jpg";
 import rotate from "../../assets/rotate.png";
 import bg from "../../assets/bg.svg";
-import { Link } from "react-router-dom";
 const LaunchEdition = () => {
   const [clear, setCase] = useState(false);
-  const [url, setUrl] = useState("iPhone13ProBlack");
-  const [selectValue, setSelectValue] = useState("iPhone 13 Pro");
+  const [url, setUrl] = useState("");
+  const [selectValue, setSelectValue] = useState("Iphone 13 Pro");
+  const links = [
+    {
+      type: "Black",
+      model: "Iphone 13 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850358499:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 13 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850424035:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 13",
+      link: "https://fasten-studio.myshopify.com/cart/43112850489571:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 13 Mini",
+      link: "https://fasten-studio.myshopify.com/cart/43112850555107:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 12 / 12 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850620643:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 12 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850686179:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 12 Mini",
+      link: "https://fasten-studio.myshopify.com/cart/43112850751715:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 11",
+      link: "https://fasten-studio.myshopify.com/cart/43112850817251:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 11 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850882787:1",
+    },
+    {
+      type: "Black",
+      model: "Iphone 11 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850948323:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 13 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850391267:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 13 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850456803:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 13",
+      link: "https://fasten-studio.myshopify.com/cart/43112850522339:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 13 Mini",
+      link: "https://fasten-studio.myshopify.com/cart/43112850587875:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 12 / 12 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850653411:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 12 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850718947:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 12 Mini",
+      link: "https://fasten-studio.myshopify.com/cart/43112850718947:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 11",
+      link: "https://fasten-studio.myshopify.com/cart/43112850850019:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 11 Pro",
+      link: "https://fasten-studio.myshopify.com/cart/43112850915555:1",
+    },
+    {
+      type: "Clear",
+      model: "Iphone 11 Pro Max",
+      link: "https://fasten-studio.myshopify.com/cart/43112850981091:1",
+    },
+  ];
+  useEffect(() => {
+    links.forEach((elem) => {
+      if (selectValue === elem.model) {
+        if (clear && elem.type === "Clear") {
+          setUrl(elem.link);
+        } else if (!clear && elem.type === "Black") {
+          setUrl(elem.link);
+        }
+      }
+    });
+  }, [clear, selectValue]);
+
   const clickHandler = (e) => {
     const active = document.querySelector(".active");
     active.classList.remove("active");
     e.target.classList.add("active");
-    let type = "";
     if (e.target.innerText === "Black Case") {
       setCase(false);
-      type = "Black";
     } else if (e.target.innerText === "Clear Case") {
       setCase(true);
-      type = "Clear";
     }
-    setUrl(() => {
-      const value = selectValue.split(" ").join("");
-      setUrl(value + type);
-    });
+
     scrollToComponent(document.querySelector("#mob-img"), {
       offset: 0,
       align: "top",
@@ -149,7 +256,7 @@ const LaunchEdition = () => {
             </h1>
             <div className="dkk_wrap">
               <div className="dkk_div">
-                <span>350 DKK</span>
+                <span>280 DKK</span>
               </div>
               <ScrollRotate method={"perc"} loops={1} from={0} to={360}>
                 <img src={rotate} alt="" className="rotate" />
@@ -181,33 +288,28 @@ const LaunchEdition = () => {
                   <select
                     onChange={(e) => {
                       setSelectValue(e.target.value);
-                      setUrl(() => {
-                        const value = e.target.value.split(" ").join("");
-                        const type = clear ? "Clear" : "Black";
-                        setUrl(value + type);
-                      });
                     }}
                     value={selectValue}
                   >
-                    <option value="iPhone 13 Pro">iPhone 13 Pro</option>
-                    <option value="iPhone 13 Pro">iPhone 13 Pro</option>
-                    <option value="iPhone 13">iPhone 13</option>
-                    <option value="iPhone 13 Mini">iPhone 13 Mini</option>
-                    <option value="iPhone 12 / 12 Pro">
-                      iPhone 12 / 12 Pro
+                    <option value="Iphone 13 Pro">Iphone 13 Pro</option>
+                    <option value="Iphone 13 Pro">Iphone 13 Pro</option>
+                    <option value="Iphone 13">Iphone 13</option>
+                    <option value="Iphone 13 Mini">Iphone 13 Mini</option>
+                    <option value="Iphone 12 / 12 Pro">
+                      Iphone 12 / 12 Pro
                     </option>
-                    <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
-                    <option value="iPhone 12 Mini">iPhone 12 Mini</option>
-                    <option value="iPhone 11">iPhone 11</option>
-                    <option value="iPhone 11 Pro">iPhone 11 Pro</option>
-                    <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                    <option value="Iphone 12 Pro Max">Iphone 12 Pro Max</option>
+                    <option value="Iphone 12 Mini">Iphone 12 Mini</option>
+                    <option value="Iphone 11">Iphone 11</option>
+                    <option value="Iphone 11 Pro">Iphone 11 Pro</option>
+                    <option value="Iphone 11 Pro Max">Iphone 11 Pro Max</option>
                   </select>
                 </div>
               </div>
 
-              <Link to={`/${url}`} className="buy_now">
+              <a target={"blank"} href={`${url}`} className="buy_now">
                 BUY NOW
-              </Link>
+              </a>
             </div>
           </div>
         </div>
