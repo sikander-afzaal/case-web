@@ -19,7 +19,7 @@ const Blend = () => {
       img: sharp,
     },
     {
-      title: "MarketPlace",
+      title: "Market Place",
       text: `Tired of your Fasten Case? Let somebody else give it some love and save resources. We are working on a marketplace where it will be easy for you to find a buyer among our visitors. Coming soon!`,
       className: "dollar_img",
       img: dollar,
