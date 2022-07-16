@@ -1,6 +1,6 @@
 import React from "react";
-import img1 from "../../assets/img1.png";
-import img2 from "../../assets/img2.png";
+import img1 from "../../assets/img1.jpg";
+import img2 from "../../assets/img2.jpg";
 function Section2() {
   return (
     <div className="section2">
