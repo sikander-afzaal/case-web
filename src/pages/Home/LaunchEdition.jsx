@@ -182,7 +182,7 @@ const LaunchEdition = () => {
               interval: 2500,
               gap: "0px",
               rewind: true,
-              loop: false,
+              type: "loop",
               perPage: 1,
               height: "auto",
               width: "100%",
