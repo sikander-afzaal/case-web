@@ -627,13 +627,12 @@ html .mb {
     height: 80px;
   }
   .titleFont {
-    font-size: 25px;
+    -webkit-text-stroke-width: 0.5px !important;
+    font-weight: bolder;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 500px) {
-  .titleFont {
-    --webkit-text-stroke-width: 1px;
-  }
   .row-div {
     flex-direction: column;
     align-items: flex-start;
@@ -649,9 +648,7 @@ html .mb {
   .active_faq p {
     margin-top: 0px;
   }
-  .titleFont {
-    font-size: 20px;
-  }
+
   .section2 img:first-of-type {
     margin-top: -930px;
     margin-bottom: -65px;
